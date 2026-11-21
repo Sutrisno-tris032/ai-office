@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #0e1726;
+  --color-muted: #556070;
+  --color-line: #e3e6eb;
+  --color-canvas: #f5f6f8;
+  --color-brand: #1e4fd8;
+  --color-brand-soft: #e8eefc;
+  --color-brand-dark: #163ba6;
+}
+
+html,
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+@keyframes pulse-dot {
+  0% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.45); }
+  70% { box-shadow: 0 0 0 6px rgba(22, 163, 74, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+}
+.live-dot { animation: pulse-dot 1.8s infinite; }
+
+@keyframes typing { 0%, 20% { opacity: .2 } 50% { opacity: 1 } 100% { opacity: .2 } }
+.typing span { animation: typing 1.2s infinite; }
+.typing span:nth-child(2) { animation-delay: .2s; }
+.typing span:nth-child(3) { animation-delay: .4s; }

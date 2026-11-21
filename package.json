@@ -1,0 +1,21 @@
+{
+  "name": "ai-office",
+  "private": true,
+  "version": "0.1.0",
+  "description": "AI Office — virtual office tempat tim AI agent membangun produk digital klien",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @ai-office/server & npm run dev --workspace @ai-office/web",
+    "dev:server": "npm run dev --workspace @ai-office/server",
+    "dev:web": "npm run dev --workspace @ai-office/web",
+    "build": "npm run build --workspace @ai-office/server && npm run build --workspace @ai-office/web",
+    "test": "npm test --workspace @ai-office/server",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
